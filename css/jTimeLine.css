@@ -1,0 +1,195 @@
+﻿/*容器*/
+.tmlineContainer
+{
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: arial, 'Hiragino Sans GB' , 'Microsoft Yahei' , '微软雅黑' , '宋体' , \5b8b\4f53, Tahoma, Arial, Helvetica, STHeiti;
+    font-size: 13px;
+    position: relative;
+    min-height:400px;
+    background-color: whitesmoke;
+    /*border: 1px solid #eaeaea;
+    background-color: #E3E7EA;
+    height: 624px;*/
+}
+/*时间轴导航*/
+.tmlineNav
+{
+    display: block;
+    width: 16px;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+/*时间轴内容*/
+.tmlineContent
+{
+    display: block;
+    width: 4px;
+    height: 100%;
+    margin: 0 auto;
+    font-size: 0;
+    float: left;
+    position: absolute;
+    left: 428px;
+}
+/*流程竖线*/
+.tmlineVLine
+{
+    width: 4px;
+    margin-left: -290px; /*调整竖线轴的位置*/
+}
+.tmlineVLinePlus /*非第一个流程竖线*/
+{
+    margin-top: 2px;
+}
+/*流程横线*/
+.tmlineHLine
+{
+    height: 4px;
+    width: 40px;
+}
+.tmlineHLineLeft{margin-left: -330px; margin-top: -6px;}
+.tmlineHLineRight{margin-left: -290px; margin-top: -6px;}
+/*流程节点*/
+.tmlineNode
+{
+    height: 8px;
+    width: 8px;
+    margin-left: -292px;/*确定连接节点的位置*/
+    cursor: pointer;
+}
+/*时间轴过去时*/
+.tmlinePast
+{
+    background-color: #08913F;
+}
+/*时间轴进行时*/
+.tmlineNow
+{
+    background-color: #00A6FB;
+}
+/*时间轴将来时*/
+.tmlineFuture
+{
+    background-color: #C6C6C4;
+}
+/*流程项过去时*/
+.workflowItemPast
+{
+    color: #08913F;
+}
+.workflowItemBorderPast
+{
+    border: 2px solid #08913F;
+    }
+/*流程项进行时*/
+.workflowItemNow
+{
+    color: #00A6FB;
+}
+.workflowItemBorderNow
+{
+    border: 2px solid #00A6FB;
+    }
+/*流程项将来时*/
+.workflowItemFuture
+{
+    color: #FE0F26;
+}
+.workflowItemBorderFuture
+{
+    border: 2px solid #C6C6C4;
+    }
+/*流程明细此处可以调整小方格的宽度*/
+.workflowItem
+{
+    position: absolute;
+    width: 110px;
+    background: #fff;
+    text-align: justify;
+    word-wrap: break-word;
+    padding: 5px 5px;
+    vertical-align: middle;
+    margin-top: 6px;
+}
+.workflowItemTr
+{
+    background-color: #F8F8F8;
+    cursor: pointer;
+    line-height: 24px;
+}
+.workflowItemTr:hover
+{
+    background-color: #F6E79A;
+}
+.workflowItemTd1
+{
+    vertical-align: top;
+    width: 24px;
+}
+.workflowItemTd2
+{
+    width: 298px;
+    padding: 0px 5px;
+}
+.workflowItemTd3
+{
+    vertical-align: top;
+    width: 24px;
+}
+
+.workflowItemPersonImg
+{
+    background-position: 96px -198px;
+}
+.workflowItemPersonName
+{
+    font-weight: bold;
+}
+.workflowItemDoing
+{
+    color: #7C7C7C;
+}
+.workflowItemEditImg
+{
+    background-position: 65px -198px;
+}
+/*流程说明*/
+.workflowDesc
+{
+    position: absolute;
+}
+
+.workflowDescRightTd2
+{
+    width: 120px;
+    padding: 0px 5px;
+    text-align: left;
+}
+.workflowDescLeftTd1
+{
+    width: 120px; padding: 0px 5px; text-align: right;
+}
+
+.workflowDesc tr
+{
+    line-height: 24px;
+}
+.workflowDescTitle
+{
+    font-weight: bold;
+}
+/*6种状态图标位置*/
+.leftPast{ background-position:269px -195px;}
+.rightPast{background-position: 304px -195px;}
+.leftNow{background-position: 200px -195px;}
+.rightNow{background-position:235px -195px;}
+.leftFuture{background-position:132px -195px;}
+.rightFuture{background-position:166px -195px;}
+/*公共位置部分*/
+.pubItemLeft{left: 4px; *left:15px;}/*左侧方块的位置*/
+.pubItemRight{left: 166px;}/*右侧代码的位置*/
+.pubDescLeft{left: 0px;}
+.pubDescRight{left: 164px;}
