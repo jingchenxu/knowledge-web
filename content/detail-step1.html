@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/semantic.min.css" />
+		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="../js/semantic.min.js"></script>
+		<title>detail-knowledge</title>
+		<style type="text/css">
+			body {
+				overflow-y: scroll;
+				font-family: "微软雅黑";
+			}
+			
+			;
+			.ui.equal.width.center.aligned.padded.grid {
+				width: 100%;
+			}
+			
+			.logo {
+				float: left;
+				margin-top: 11px;
+			}
+			
+			#login {
+				padding: 0;
+				background-color: whitesmoke;
+			}
+			
+			#navgation {
+				padding: 0;
+				background-color: grey;
+			}
+			
+			#search {
+				padding: 0;
+				background-color: cornflowerblue;
+			}
+			
+			#introduction {
+				padding: 0;
+				background-color: white;
+			}
+			
+			#login-content {
+				width: 1140px;
+				height: 40px;
+				margin: 0 auto;
+				background-color: whitesmoke;
+			}
+			
+			#navgation-content {
+				width: 1140px;
+				height: 50px;
+				margin: 0 auto;
+				background-color: grey;
+			}
+			
+			#search-content {
+				width: 1140px;
+				height: 130px;
+				margin: 0 auto;
+				background-color: #5c93b0;
+			}
+			
+			#introduction-content {
+				width: 1140px;
+				height: 130px;
+				margin: 0 auto;
+				background-color: white;
+			}
+			
+			#title-detail {
+				width: 830px;
+				height: 130px;
+				float: left;
+			}
+			
+			#title-Focus {
+				width: 300px;
+				height: 130px;
+				float: right;
+			}
+			
+			#home-icon {
+				margin: 0;
+				padding: 0;
+				float: left;
+			}
+			
+			#web-name {
+				float: left;
+				margin-top: 10px;
+			}
+			
+			#classification {
+				width: 1140px;
+				height: auto;
+				margin: 0 auto;
+				margin-top: 40px;
+				background-color: white;
+			}
+			
+			.card {
+				width: 360px;
+			}
+			
+			#box {
+				width: 100%;
+				height: auto;
+			}
+			
+			#dynamic-contribution {
+				width: 1140px;
+				height: auto;
+				margin-top: 30px;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 0;
+				overflow: auto;
+				/*父级div的高度不随子级div的高度变化而变化，子级div设置float属性*/
+			}
+			
+			#dynamic {
+				width: 830px;
+				height: auto;
+				float: right;
+				margin: 0;
+				padding: 0;
+				border-radius: 5px;
+			}
+			
+			#detail-content {
+				width: 830px;
+				height: auto;
+				padding: 10px 10px 10px 10px;
+			}
+			
+			#detail-title {
+				width: 100%;
+				height: 50px;
+				background-color: whitesmoke;
+			}
+			
+			#detail-title-no1 {
+				width: 100%;
+				height: 100px;
+			}
+			
+			#tags {
+				width: 100%;
+				height: auto;
+			}
+			
+			#detail-title-content {
+				width: 100%;
+				height: 200px;
+				background-color: blanchedalmond;
+			}
+			
+			#contribution {
+				width: 300px;
+				height: auto;
+				float: left;
+				margin: 0;
+				padding: 10px 0px 10px 0px;
+				border: solid;
+				border-width: 1px;
+				border-color: white;
+			}
+			
+			#included {
+				width: auto;
+				height: 300px;
+				margin-top: 10px;
+				background-color: navajowhite;
+			}
+			
+			#specialist {
+				width: auto;
+				height: 300px;
+				margin-top: 10px;
+				background-color: navajowhite;
+			}
+			
+			#website-message {
+				width: 1140px;
+				height: 100px;
+				background-color: white;
+				margin-top: 30px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.copyright {}
+		</style>
+	</head>
+
+	<body>
+		<div class="container" id="head">
+			<!--			<div class="ui  top fixed menu">-->
+			<div class="ui equal width center aligned padded grid">
+				<div class="row" id="navgation">
+					<div class="column" style="height: 50px;">
+						<div class="container" id="navgation-content">
+							<a href="../index.html"><img class="logo" src="../img/logo.png" /></a>
+							<div class="ui menu" style="float: left; font-family:'微软雅黑';background-color: grey;margin-top: 5px;border-width: 0px;box-shadow: none;">
+								<a class="item" style="color: white;font-size: 14px;font-family: '微软雅黑';"> &nbsp;玉米&nbsp; </a>
+								<a class="item" style="color: white;">&nbsp;土豆&nbsp;</a>
+								<a class="item" style="color: white;">&nbsp;四季豆&nbsp;</a>
+								<a class="item" style="color: white;">&nbsp;青椒&nbsp;</a>
+								<a class="item" style="color: white;">&nbsp;茄子&nbsp;</a>
+								<a class="item" style="color: white;">&nbsp;生菜&nbsp;</a>
+								<a class="item" style="color: white;">&nbsp;猕猴桃&nbsp;</a>
+								<div class="ui pointing dropdown link item" id="shopping">
+									<span class="text" style="color: white;">&nbsp;其他&nbsp;</span>
+									<i class="inverted dropdown icon"></i>
+									<div class="menu">
+										<div class="item">&nbsp;&nbsp;水稻&nbsp;&nbsp;</div>
+										<div class="item">&nbsp;&nbsp;黄瓜&nbsp;&nbsp;</div>
+										<div class="item">&nbsp;&nbsp;西葫芦&nbsp;&nbsp;</div>
+										<div class="item">&nbsp;&nbsp;芹菜&nbsp;&nbsp;</div>
+										<div class="item">&nbsp;&nbsp;大白菜&nbsp;&nbsp;</div>
+										<div class="item">&nbsp;&nbsp;苹果&nbsp;&nbsp;</div>
+										<div class="item">&nbsp;&nbsp;韭菜&nbsp;&nbsp;</div>
+										<div class="item" onclick="window.open('detail.html','_self')">&nbsp;&nbsp;红提葡萄&nbsp;&nbsp;</div>
+									</div>
+								</div>
+							</div>
+							<div class="container" style="float: right; margin-top: 15.5px;">
+								<i class="inverted white book icon"></i>
+								<span id="" style="color: white;">
+									我的知识库
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row" id="search">
+					<div class="column" style="padding: 0;background-color: #5c93b0;">
+						<div class="container" id="search-content">
+							<div class="content">
+								<img style="width: 80px;height: 80px;border-radius: 80px;float: left;margin-top: 25px;" src="../img/hongti.jpg">
+								<h2 style="font-family: '微软雅黑';color: white;float: left;margin-top: 50px;margin-left: 20px;">红提葡萄</h2>
+							</div>
+							<div class="ui search" style="float: right;margin-top: 45px;">
+								<div class="ui icon input">
+									<input class="prompt" style="width: 250px;" placeholder="快速搜索红提葡萄相关知识...">
+									<i class="large search icon"></i>
+								</div>
+								<div class="results"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--			</div>-->
+		</div>
+
+		<div class="container" id="main">
+
+		</div>
+
+		<div class="container" id="footer">
+			<div class="container" id="website-message">
+				<div class="content">
+					<span id="">  公司简介  </span>|<span id="">  公司简介  </span>|<span id="">  公司简介  </span>|<span id="">  公司简介  </span>|<span id="">  公司简介  </span>|<span id="">  公司简介  </span>|<span id="">  公司简介  </span>|<span id="">  公司简介  </span>|<span id="">  公司简介  </span>|
+					<span id=""> 公司简介 </span>
+				</div>
+				<div class="ui divider"></div>
+				<div class=".copyright">
+					Copyright ©2011-2016 JinheTech. All rights reserved. <span id="">|</span> 版权所有北京金禾天成科技有限公司 <span id="">|</span> 京ICP备11009730
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.item').click(function() {
+				console.log("item点击事件被监听!");
+				$('.menu .item') //选择的是menu下的item!!!!!
+					.tab();
+			});
+		});
+	</script>
+
+</html>

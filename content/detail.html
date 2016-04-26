@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="../css/semantic.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/jTimeLine.css" />
+		<link rel="stylesheet" type="text/css" href="../css/lunbo.css" />
+		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="../js/semantic.min.js"></script>
+		<script type="text/javascript" src="../js/jTimeLine.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<title>detail</title>
+		<style type="text/css">
+			body {
+				overflow-y: scroll;
+				overflow-x: hidden;
+				font-family: "微软雅黑";
+			}
+			
+			.ui.equal.width.center.aligned.padded.grid {
+				width: 100%;
+			}
+			
+			.logo {
+				float: left;
+				margin-top: 11px;
+			}
+			
+			#login {
+				padding: 0;
+				background-color: whitesmoke;
+			}
+			
+			#navgation {
+				padding: 0;
+				background-color: grey;
+			}
+			
+			#search {
+				padding: 0;
+				background-color: cornflowerblue;
+			}
+			
+			#introduction {
+				padding: 0;
+				background-color: white;
+			}
+			
+			#login-content {
+				width: 1140px;
+				height: 40px;
+				margin: 0 auto;
+				background-color: whitesmoke;
+			}
+			
+			#navgation-content {
+				width: 1140px;
+				height: 50px;
+				margin: 0 auto;
+				background-color: grey;
+			}
+			
+			#search-content {
+				width: 1140px;
+				height: 130px;
+				margin: 0 auto;
+				background-color: #5c93b0;
+			}
+			
+			#introduction-content {
+				width: 1140px;
+				height: 130px;
+				margin: 0 auto;
+				background-color: white;
+			}
+			
+			#title-detail {
+				width: 830px;
+				height: 130px;
+				float: left;
+			}
+			
+			#title-Focus {
+				width: 300px;
+				height: 130px;
+				float: right;
+			}
+			
+			#home-icon {
+				margin: 0;
+				padding: 0;
+				float: left;
+			}
+			
+			#web-name {
+				float: left;
+				margin-top: 10px;
+			}
+			
+			#classification {
+				width: 1140px;
+				height: auto;
+				margin: 0 auto;
+				margin-top: 40px;
+				background-color: white;
+			}
+			
+			.card {
+				width: 360px;
+			}
+			
+			#box {
+				width: 100%;
+				height: auto;
+			}
+			
+			#dynamic-contribution {
+				width: 1140px;
+				height: auto;
+				margin-top: 30px;
+				margin-left: auto;
+				margin-right: auto;
+				padding: 0;
+				overflow: hidden;
+				/*父级div的高度不随子级div的高度变化而变化，子级div设置float属性*/
+			}
+			
+			#dynamic {
+				width: 830px;
+				height: auto;
+				float: left;
+				margin: 0;
+				padding: 0;
+				border-radius: 5px;
+			}
+			
+			#detail-content {
+				width: 830px;
+				height: 1000px;
+				margin-top: 30px;
+			}
+			
+			#detail-title {
+				width: 100%;
+				height: 50px;
+				background-color: whitesmoke;
+			}
+			
+			#detail-title-no1 {
+				width: 100%;
+				height: 100px;
+			}
+			
+			#tags {
+				width: 100%;
+				height: auto;
+			}
+			
+			.title-content {
+				width: 100%;
+				height: 202px;
+				overflow: hidden;
+				border: solid;
+				border-bottom: hidden;
+				border-left: hidden;
+				border-right: hidden;
+				border-top-width: 2px;
+				border-top-color: whitesmoke;
+			}
+			
+			.title-content-list {
+				width: 45%;
+				height: auto;
+				float: left;
+				padding: 20px -20px 20px 20px;
+			}
+			
+			.title-content li {
+				width: 100%;
+				height: 30px;
+				text-overflow: ellipsis;
+			}
+			
+			.title-content a {
+				color: black;
+				text-overflow: ellipsis;
+			}
+			
+			#contribution {
+				width: 300px;
+				height: auto;
+				float: right;
+				margin: 0;
+				padding: 10px 0px 10px 0px;
+				border: solid;
+				border-width: 1px;
+				border-color: white;
+			}
+			
+			#included {
+				width: 100%;
+				height: 250px;
+				margin-top: 10px;
+				background-color: whitesmoke;
+				box-shadow: 3px;
+			}
+			
+			#specialist {
+				width: auto;
+				height: 300px;
+				margin-top: 10px;
+				background-color: whitesmoke;
+			}
+			
+			#specialist img {
+				width: 40px;
+				height: 40px;
+				border-radius: 40px;
+				margin-top: 5px;
+				vertical-align: middle;
+			}
+			
+			#website-message {
+				width: 1140px;
+				height: 100px;
+				background-color: white;
+				margin-top: 30px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.copyright {}
+		</style>
+	</head>
+
+	<body>
+		<div class="container" id="head">
+			<!--			<div class="ui  top fixed menu">-->
+			<div class="ui equal width center aligned padded grid">
+				<div class="row" id="navgation">
+					<div class="column" style="height: 50px;">
+						<div class="container" id="navgation-content">
+							<a href="../index.html"><img class="logo" src="../img/logo.png" /></a>
+							<div class="ui menu" style="float: left; font-family:'微软雅黑';background-color: grey;margin-top: 5px;border-width: 0px;box-shadow: none;">
+								<a class="item" style="color: white;font-size: 14px;font-family: '微软雅黑';"> &nbsp;玉米&nbsp; </a>
+								<a class="item" style="color: white;">&nbsp;土豆&nbsp;</a>
+								<a class="item" style="color: white;">&nbsp;四季豆&nbsp;</a>
+								<a class="item" style="color: white;">&nbsp;青椒&nbsp;</a>
+								<a class="item" style="color: white;">&nbsp;茄子&nbsp;</a>
+								<a class="item" style="color: white;">&nbsp;生菜&nbsp;</a>
+								<a class="item" style="color: white;">&nbsp;猕猴桃&nbsp;</a>
+								<div class="ui pointing dropdown link item" id="shopping">
+									<span class="text" style="color: white;">&nbsp;其他&nbsp;</span>
+									<i class="inverted dropdown icon"></i>
+									<div class="menu">
+										<div class="item">&nbsp;&nbsp;水稻&nbsp;&nbsp;</div>
+										<div class="item">&nbsp;&nbsp;黄瓜&nbsp;&nbsp;</div>
+										<div class="item">&nbsp;&nbsp;西葫芦&nbsp;&nbsp;</div>
+										<div class="item">&nbsp;&nbsp;芹菜&nbsp;&nbsp;</div>
+										<div class="item">&nbsp;&nbsp;大白菜&nbsp;&nbsp;</div>
+										<div class="item">&nbsp;&nbsp;苹果&nbsp;&nbsp;</div>
+										<div class="item">&nbsp;&nbsp;韭菜&nbsp;&nbsp;</div>
+										<div class="item" onclick="window.open('detail.html','_self')">&nbsp;&nbsp;红提葡萄&nbsp;&nbsp;</div>
+									</div>
+								</div>
+							</div>
+							<div class="container" style="float: right; margin-top: 15.5px;">
+								<i class="inverted white book icon"></i>
+								<span id="" style="color: white;">
+									我的知识库
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row" id="search">
+					<div class="column" style="padding: 0;background-color: #5c93b0;">
+						<div class="container" id="search-content">
+							<div class="content">
+								<img style="width: 80px;height: 80px;border-radius: 80px;float: left;margin-top: 25px;" src="../img/hongti.jpg">
+								<h2 style="font-family: '微软雅黑';color: white;float: left;margin-top: 50px;margin-left: 20px;">红提葡萄</h2>
+							</div>
+							<div class="ui search" style="float: right;margin-top: 45px;">
+								<div class="ui icon input">
+									<input class="prompt" type="text" placeholder="请输入搜索信息...">
+									<i class="large search icon"></i>
+								</div>
+								<div class="results"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row" id="introduction">
+					<div class="column">
+						<div class="container" id="introduction-content">
+							<div class="container" id="title-detail">
+								<article style="float: left;padding:25px 10px 10px 10px ;text-align:left;line-height:25px;text-overflow: ellipsis;">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://baike.baidu.com/view/132001.htm">红提</a><a href="http://baike.baidu.com/subview/5119/5062282.htm">葡萄</a>又名红地球，欧亚种。原产于美国加州，是由美国加利福尼亚州立大学研究人员于70年代进行杂交试验，培育而成的一个葡萄品种。自我国1987年引入该品种以来，华北及西北大部分地区栽培表现极好，果实品质优，晚熟，耐贮运，丰产，是发展葡萄的首选优质高效品种。目前来说，中国的产区主要分布在：陕西渭南，新疆，云南，甘肃，宁夏，黄河故道，昌黎，胶东半岛，江苏宝应，沈阳
+									。其中，三贤故里的渭南临渭区种植地，因红提葡萄品质好，面积大，最为有名。
+								</article>
+							</div>
+							<div class="container" id="title-Focus">
+								<div class="ui labeled button" tabindex="0" style="margin-top: 45px;">
+									<div class="ui red button"><i class="heart icon"></i> 关注 </div>
+									<a class="ui basic red left pointing label">
+    1,048
+  </a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--			</div>-->
+		</div>
+
+		<div class="container" id="main">
+
+			<div class="container" id="dynamic-contribution">
+				<div class="container" id="dynamic">
+					<div class="container">
+						<div class="ui top attached tabular menu">
+							<div class="active item">
+								<h3 style="font-family: '微软雅黑';">最新收录</h3>
+							</div>
+						</div>
+						<div class="ui bottom attached active tab segment">
+							<div class="container" style="width: 100%;height: 200px;">
+								<div id="scrollPics">
+									<ul class="slider" style="list-style: none;padding-left: 0px;">
+										<li>
+											<div class="container" style="background-color:whitesmoke;margin:0px;padding:5px 0px 5px 0px;width: 100%;height: 200px;">
+												<div class="ui card" style="width: 790px; margin: 0px;padding: 0px;margin: 0px 5px 0px 5px;">
+													<div class="content">
+														<i class="left floated help icon"></i>
+														<a class="header">如何保持水土养分</a>
+														<div class="description">
+															<p style="float: left; margin-right: 20px;">来自</p> <a class="author">陕北老农</a>
+														</div>
+													</div>
+													<div class="extra content">
+														<span class="left floated date">2014-4-16</span>
+														<span class="left floated">&nbsp;&nbsp;&nbsp;&nbsp;收录于</span>
+														<span class="right floated like"><i class="like icon"></i> 收藏 </span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="container" style="background-color:whitesmoke;margin:0px;padding:5px 0px 5px 0px;width: 100%;height: 200px;">
+												<div class="ui card" style="width: 790px; margin: 0px;padding: 0px;margin: 0px 5px 0px 5px;">
+													<div class="content">
+														<i class="left floated help icon"></i>
+														<a class="header">如何保持水土养分</a>
+														<div class="description">
+															<p style="float: left; margin-right: 20px;">来自</p> <a class="author">陕北老农</a>
+														</div>
+													</div>
+													<div class="extra content">
+														<span class="left floated date">2014-4-16</span>
+														<span class="left floated">&nbsp;&nbsp;&nbsp;&nbsp;收录于</span>
+														<span class="right floated like"><i class="like icon"></i> 收藏 </span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="container" style="background-color:whitesmoke;margin:0px;padding:5px 0px 5px 0px;width: 100%;height: 200px;">
+												<div class="ui card" style="width: 790px; margin: 0px;padding: 0px;margin: 0px 5px 0px 5px;">
+													<div class="content">
+														<i class="left floated help icon"></i>
+														<a class="header">如何保持水土养分</a>
+														<div class="description">
+															<p style="float: left; margin-right: 20px;">来自</p> <a class="author">陕北老农</a>
+														</div>
+													</div>
+													<div class="extra content">
+														<span class="left floated date">2014-4-16</span>
+														<span class="left floated">&nbsp;&nbsp;&nbsp;&nbsp;收录于</span>
+														<span class="right floated like"><i class="like icon"></i> 收藏 </span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="container" style="background-color:whitesmoke;margin:0px;padding:5px 0px 5px 0px;width: 100%;height: 200px;">
+												<div class="ui card" style="width: 790px; margin: 0px;padding: 0px;margin: 0px 5px 0px 5px;">
+													<div class="content">
+														<i class="left floated help icon"></i>
+														<a class="header">如何保持水土养分</a>
+														<div class="description">
+															<p style="float: left; margin-right: 20px;">来自</p> <a class="author">陕北老农</a>
+														</div>
+													</div>
+													<div class="extra content">
+														<span class="left floated date">2014-4-16</span>
+														<span class="left floated">&nbsp;&nbsp;&nbsp;&nbsp;收录于</span>
+														<span class="right floated like"><i class="like icon"></i> 收藏 </span>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="container" style="background-color:whitesmoke;margin:0px;padding:5px 0px 5px 0px;width: 100%;height: 200px;">
+												<div class="ui card" style="width: 790px; margin: 0px;padding: 0px;margin: 0px 5px 0px 5px;">
+													<div class="content">
+														<i class="left floated help icon"></i>
+														<a class="header">如何保持水土养分</a>
+														<div class="description">
+															<p style="float: left; margin-right: 20px;">来自</p> <a class="author">陕北老农</a>
+														</div>
+													</div>
+													<div class="extra content">
+														<span class="left floated date">2014-4-16</span>
+														<span class="left floated">&nbsp;&nbsp;&nbsp;&nbsp;收录于</span>
+														<span class="right floated like"><i class="like icon"></i> 收藏 </span>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<ul class="num">
+										<li class="on">1</li>
+										<li>2</li>
+										<li>3</li>
+										<li>4</li>
+										<li>5</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container" id="detail-content">
+						<div class="container" id="detail-title" style="padding: 13px 0px 0px 20px;">
+							<h3 style="font-family: '微软雅黑';">红提葡萄种植流程</h3>
+						</div>
+						<div class="container" id="detail-title-no1">
+							<div class="container" style="width: 100%;height: auto;padding: 13px 0px 0px 0px;overflow: auto;">
+								<h3 style="font-family: '微软雅黑'; border-left:solid;border-left-color: red;border-left-width: 3px; padding-left: 20px;float: left;">整地</h3>
+								<div style="float: right;margin-right: 20px;">
+									<div class="description" style="float: left;margin-top: 5px; margin-right: 10px;">
+										编辑专家
+									</div>
+									<img style="width: 30px;height: 30px;border-radius: 30px;" src="../img/laonong.jpg">
+								</div>
+							</div>
+							<div class="container" id="tags">
+								<a class="ui tag label">种植前期</a>
+								<a class="ui red tag label">定植沟</a>
+								<a class="ui teal tag label" href="detail-step1.html">土壤</a>
+								<a class="ui red tag label">定植</a>
+							</div>
+						</div>
+						<div class="container title-content">
+							<div class="container title-content-list">
+								<ul style="list-style: none;">
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于在种植过程中出现的关于土地的要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求测试</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于在种植过程中出现的关于土地的要求</a></li>
+								</ul>
+							</div>
+							<div class="container title-content-list">
+								<ul style="list-style: none;">
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于在种植过程中出现的关于土地的要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求测试</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于在种植过程中出现的关于土地的要求</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="container" id="detail-title-no1">
+							<div class="container" style="width: 100%;height: auto;padding: 13px 0px 0px 0px;overflow: auto;">
+								<h3 style="font-family: '微软雅黑'; border-left:solid;border-left-color: red;border-left-width: 3px; padding-left: 20px;float: left;">整地</h3>
+								<div style="float: right;margin-right: 20px;">
+									<div class="description" style="float: left;margin-top: 5px; margin-right: 10px;">
+										编辑专家
+									</div>
+									<img style="width: 30px;height: 30px;border-radius: 30px;" src="../img/laonong.jpg">
+								</div>
+							</div>
+							<div class="container" id="tags">
+								<a class="ui tag label">种植前期</a>
+								<a class="ui red tag label">定植沟</a>
+								<a class="ui teal tag label">土壤</a>
+								<a class="ui red tag label">定植</a>
+							</div>
+						</div>
+						<div class="container title-content">
+							<div class="container title-content-list">
+								<ul style="list-style: none;">
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于在种植过程中出现的关于土地的要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求测试</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于在种植过程中出现的关于土地的要求</a></li>
+								</ul>
+							</div>
+							<div class="container title-content-list">
+								<ul style="list-style: none;">
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于在种植过程中出现的关于土地的要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求测试</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于在种植过程中出现的关于土地的要求</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="container" id="detail-title-no1">
+							<div class="container" style="width: 100%;height: auto;padding: 13px 0px 0px 0px;overflow: auto;">
+								<h3 style="font-family: '微软雅黑'; border-left:solid;border-left-color: red;border-left-width: 3px; padding-left: 20px;float: left;">整地</h3>
+								<div style="float: right;margin-right: 20px;">
+									<div class="description" style="float: left;margin-top: 5px; margin-right: 10px;">
+										编辑专家
+									</div>
+									<img style="width: 30px;height: 30px;border-radius: 30px;" src="../img/laonong.jpg">
+								</div>
+							</div>
+							<div class="container" id="tags">
+								<a class="ui tag label">种植前期</a>
+								<a class="ui red tag label">定植沟</a>
+								<a class="ui teal tag label">土壤</a>
+								<a class="ui red tag label">定植</a>
+							</div>
+						</div>
+						<div class="container title-content">
+							<div class="container title-content-list">
+								<ul style="list-style: none;">
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于在种植过程中出现的关于土地的要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求测试</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于在种植过程中出现的关于土地的要求</a></li>
+								</ul>
+							</div>
+							<div class="container title-content-list">
+								<ul style="list-style: none;">
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于在种植过程中出现的关于土地的要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求测试</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于红提葡萄种植前的土壤要求</a></li>
+									<li><i class="large grey book icon"></i><a href="#">关于在种植过程中出现的关于土地的要求</a></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="container" id="contribution">
+					<div class="content">
+						<h2 style="font-family: '微软雅黑'; margin-left: 10px;cursor: pointer;" onclick="window.open('structure.html','_self')">查看种植流程图</h2>
+					</div>
+					<div class="container" style="height: auto;margin-top: 8px;background-color: whitesmoke;">
+						<div class="container" style="width: 100%;height: 60px;">
+							<img style="width: 60px;height: 60px;border-radius: 60px;margin-left: 120px;" src="../img/hongti.jpg" />
+						</div>
+						<div id="container" class="tmlineContainer">
+						</div>
+					</div>
+					<div class="container" id="included">
+						<div class="container" style="padding:20px 20px 0px 20px;">
+							<div class="container">
+								<p>本库已收录</p>
+							</div>
+						</div>
+						<div class="container" style="padding:0px 20px 0px 20px;">
+							<div class="container" style="float: left;">
+								<h2 style="color: red;">445</h2>
+							</div>
+							<div class="container" style="float: left;padding-top: 8px;margin-left: 5px;">
+								<p>条红提葡萄相关知识内容</p>
+							</div>
+						</div>
+						<div class="ui divider" style="margin-top:39px;"></div>
+						<div class="container">
+							<div class="container" style="width: 50%;height: 200px;float: left;">
+								<ul style="list-style: none;padding: 0px;">
+									<li>
+										<div class="container" style="width: 100%;height: 50px;background-color: whitesmoke;">
+											<i class="large question icon" style="margin-left: 20px;margin-top: 15px;float: left;"></i>
+											<p style="float:left;margin-top: 12px;font-size: 20px;">445</p>
+										</div>
+									</li>
+									<li>
+										<div class="container" style="width: 100%;height: 50px;background-color: whitesmoke;">
+											<i class="large file icon" style="margin-left: 20px;margin-top: 15px;float: left;"></i>
+											<p style="float:left;margin-top: 12px;font-size: 20px;">0</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="container" style="width: 50%;height: 200px;float: left;">
+								<ul style="list-style: none;padding: 0px;">
+									<li>
+										<div class="container" style="width: 100%;height: 50px;background-color: whitesmoke;">
+											<i class="large photo icon" style="margin-left: 20px;margin-top: 15px;float: left;"></i>
+											<p style="float:left;margin-top: 12px;font-size: 20px;">0</p>
+										</div>
+									</li>
+									<li>
+										<div class="container" style="width: 100%;height: 50px;background-color: whitesmoke;">
+											<i class="large film icon" style="margin-left: 20px;margin-top: 15px;float: left;"></i>
+											<p style="float:left;margin-top: 12px;font-size: 20px;">0</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="container" id="specialist">
+						<div class="container" style="width: 100%;height: auto;">
+							<h3 style="color: #808080;font-family: '微软雅黑';margin-left: 20px;">特邀专家</h3>
+						</div>
+						<div class="container">
+							<table border="0" cellspacing="" cellpadding="" style="width: 100%;height: auto;margin-top: 20px;">
+								<tr>
+									<th colspan="4" style="text-align: left;padding-left: 20px;color: #808080;">本知识库由以下编辑负责</th>
+								</tr>
+								<tr style="height: 50px;">
+									<td style="text-align: center;"><img src="../img/dayu.png" /></td>
+									<td style="text-align: center;"><img src="../img/haitang.png" /></td>
+									<td style="text-align: center;"><img src="../img/dayu.png" /></td>
+									<td style="text-align: center;"><img src="../img/haitang.png" /></td>
+								</tr>
+								<tr style="height: 50px;">
+									<td style="text-align: center;"><img src="../img/dayu.png" /></td>
+									<td style="text-align: center;"><img src="../img/haitang.png" /></td>
+									<td style="text-align: center;"><img src="../img/dayu.png" /></td>
+									<td style="text-align: center;"><img src="../img/haitang.png" /></td>
+								</tr>
+								<tr style="height: 50px;">
+									<td style="text-align: center;"><img src="../img/dayu.png" /></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container" id="footer">
+			<div class="container" id="website-message">
+				<div class="content">
+					<span id="">  公司简介  </span>|<span id="">  公司简介  </span>|<span id="">  公司简介  </span>|<span id="">  公司简介  </span>|<span id="">  公司简介  </span>|<span id="">  公司简介  </span>|<span id="">  公司简介  </span>|<span id="">  公司简介  </span>|<span id="">  公司简介  </span>|
+					<span id=""> 公司简介 </span>
+				</div>
+				<div class="ui divider"></div>
+				<div class=".copyright">
+					Copyright ©2011-2016 JinheTech. All rights reserved. <span id="">|</span> 版权所有北京金禾天成科技有限公司 <span id="">|</span> 京ICP备11009730
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+	</script>
+
+</html>
