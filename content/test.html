@@ -204,8 +204,20 @@
 			}
 		</style>
 		<script type="text/jsx">
-			/*内层组件*/
 var QuestionList = React.createClass({
+	
+	getInitialState: function() {
+		return {
+			loading: true,
+			error: null,
+			data: null
+		};
+	},
+	
+	componentDidMount() {
+		this.props
+	}
+	
   render: function() {
   	var uicardStyle = {
   		width: '100%',
@@ -247,15 +259,15 @@ var container = React.createClass({
 });
 
 
-var messagejson = [
-{arttitle: '如何保持水土养分',artauthor: '张三',arttime: '2016-0311'},
-{arttitle: '如何保持水土养分',artauthor: '张三',arttime: '2016-0311'},
-{arttitle: '如何保持水土养分',artauthor: '张三',arttime: '2016-0311'},
-{arttitle: '如何保持水土养分',artauthor: '张三',arttime: '2016-0311'},
-{arttitle: '如何保持水土养分',artauthor: '张三',arttime: '2016-0311'}
-]
+var message = [
+{"arttitle": "如何保持水土养分","artauthor": "张三","arttime": "2016-0311"},
+{"arttitle": "如何保持水土养分","artauthor": "张三","arttime": "2016-0311"},
+{"arttitle": "如何保持水土养分","artauthor": "张三","arttime": "2016-0311"},
+{"arttitle": "如何保持水土养分","artauthor": "张三","arttime": "2016-0311"},
+{"arttitle": "如何保持水土养分","artauthor": "张三","arttime": "2016-0311"}
+];
 			
-			React.render(<QuestionList DATA = {messagejson} />,document.getElementById('tab1'));
+			React.render(<QuestionList message />,document.getElementById('tab1'));
 			React.render(React.createElement(QuestionList, null), document.getElementById('tab2'));
 		</script>
 	</head>
